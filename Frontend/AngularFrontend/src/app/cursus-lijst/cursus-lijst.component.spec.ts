@@ -1,7 +1,6 @@
-import { ComponentFixture, fakeAsync, flush, inject, TestBed } from '@angular/core/testing';
+import { ComponentFixture, fakeAsync, flush, TestBed } from '@angular/core/testing';
 import { CursusService } from '../cursus.service';
 import { Cursus } from '../models/Cursus';
-import { CursusInstantie } from '../models/CursusInstantie';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 import { CursusLijstComponent } from './cursus-lijst.component';
@@ -39,11 +38,11 @@ describe('CursusLijstComponent', () => {
     const cursusInstanties: Array<any> = [
       {
         id: 11,
-        startDatum: "2022-10-07T22:00:00+00:00"
+        startDatum: '2022-10-07T22:00:00+00:00'
       },
       {
         id: 22,
-        startDatum: "2018-10-07T22:00:00+00:00"
+        startDatum: '2018-10-07T22:00:00+00:00'
       }
     ];
 
@@ -61,55 +60,63 @@ describe('CursusLijstComponent', () => {
     expect(component.seperateCursusInstances(testCursussen).length).toBe(2);
     expect(component.seperateCursusInstances(testCursussen)[0].titel).toBe('Test Titel');
     expect(component.seperateCursusInstances(testCursussen)[1].titel).toBe('Test Titel');
-    expect(component.seperateCursusInstances(testCursussen)[0].startDatum).toEqual("2018-10-07T22:00:00+00:00");
-    expect(component.seperateCursusInstances(testCursussen)[1].startDatum).toEqual("2022-10-07T22:00:00+00:00");
+    expect(component.seperateCursusInstances(testCursussen)[0].startDatum).toEqual('2018-10-07T22:00:00+00:00');
+    expect(component.seperateCursusInstances(testCursussen)[1].startDatum).toEqual('2022-10-07T22:00:00+00:00');
     
     component.cursusInstantiesData = component.seperateCursusInstances(testCursussen);
 
     expect(component.cursusInstantiesData.length).toBe(2);
+
+    flush();
+    fixture.detectChanges();
+
+    expect(el.queryAll(By.css('.startDatum-row')).length).toBe(2);
+    expect(fixture.nativeElement.querySelector('.startDatum-row')?.textContent).toContain('08/10/2018');
+    expect(fixture.nativeElement.querySelector('.duur-row')?.textContent).toContain('3');
+    expect(fixture.nativeElement.querySelector('.titel-row')?.textContent).toContain('Test Titel');
   }));
 
-  it('should return an ordered array', () => {
+  it('should return an ordered array by date', () => {
     let TestInput: Array<any> = 
     [
       {
         duur: 1,
-        titel: "Object 1",
-        startDatum: "2018-10-07T22:00:00+00:00"
+        titel: 'Object 1',
+        startDatum: '2018-10-07T22:00:00+00:00'
       },
       {
         duur: 2,
-        titel: "Object 2",
-        startDatum: "2022-10-07T22:00:00+00:00"
+        titel: 'Object 2',
+        startDatum: '2022-10-07T22:00:00+00:00'
       },      
       {
         duur: 3,
-        titel: "Object 3",
-        startDatum: "2018-11-07T22:00:00+00:00"
+        titel: 'Object 3',
+        startDatum: '2018-11-07T22:00:00+00:00'
       }
     ]
 
-    expect(component.sortArray(TestInput, "startDatum").length).toBe(3);
+    expect(component.sortArray(TestInput, 'startDatum').length).toBe(3);
 
     let ExpectedOutput: Array<any> = 
     [
       {
         duur: 1,
-        titel: "Object 1",
-        startDatum: "2018-10-07T22:00:00+00:00"
+        titel: 'Object 1',
+        startDatum: '2018-10-07T22:00:00+00:00'
       },
       {
         duur: 3,
-        titel: "Object 3",
-        startDatum: "2018-11-07T22:00:00+00:00"
+        titel: 'Object 3',
+        startDatum: '2018-11-07T22:00:00+00:00'
       },
       {
         duur: 2,
-        titel: "Object 2",
-        startDatum: "2022-10-07T22:00:00+00:00"
+        titel: 'Object 2',
+        startDatum: '2022-10-07T22:00:00+00:00'
       }
     ]
 
-    expect(component.sortArray(TestInput, "startDatum")).toEqual(ExpectedOutput);
+    expect(component.sortArray(TestInput, 'startDatum')).toEqual(ExpectedOutput);
   });
 });
