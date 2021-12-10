@@ -14,7 +14,7 @@ npm start
 
 6. In de command window zie je zodra het succesvol is gecompiled het volgende staan:
 ** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
-Ga naar http://localhost:4200/ op je gewenste browser om de site te zien.
+Ga naar http://localhost:4200/ (of een eventueel andere link die er staat) op je gewenste browser om de site te zien.
 
 Afsluiten:
 Om weer af te sluiten, gebruik Ctrl+C in de command window om de angular te stoppen, en klik de swagger browser-window en de Backend.exe terminal weg.
