@@ -1,4 +1,5 @@
-Welkom bij de case herkansing van Cefas Pex. Hierbij de setup om de site op te starten:
+Welkom bij de case herkansing van Cefas Pex. Dit project is gemaakt met behulp van de nieuwste Visual Studio, .NET etc. De geïnstalleerde workloads zijn te zien in bijlage1.jpg
+Hierbij de setup om de site op te starten:
 
 1. Open met behulp van Visual Studio de Backend.sln
 
