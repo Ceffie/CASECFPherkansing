@@ -33,7 +33,6 @@ namespace CASECFP_WebApi.Controllers
         public async Task<ActionResult<string>> PostCursus(List<Cursus> cursussen)
         {
             var res = await cursusHandler.ReorganizeAndAddCursussenAsync(_context, cursussen);
-            Console.WriteLine(res);
 
             return Ok(JsonSerializer.Serialize(res));
         }

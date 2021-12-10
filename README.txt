@@ -1,0 +1,20 @@
+Welkom bij de case herkansing van Cefas Pex. Hierbij de setup om de site op te starten:
+
+1. Open met behulp van Visual Studio de Backend.sln
+
+2. Run in de Package Manager Console de volgende code om de database aan te maken:
+Update-Database
+
+3. Gebruik ctrl+F5 of run met behulp van de run-knop de CASECFP_WebApi. Dit opent een terminal en een browser-window met de swagger.
+
+4. Met een nieuw Command window, ga naar de folder AngularFrontend (die zit in Frontend).
+
+5. Run de volgende code:
+npm start
+
+6. In de command window zie je zodra het succesvol is gecompiled het volgende staan:
+** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
+Ga naar http://localhost:4200/ op je gewenste browser om de site te zien.
+
+Afsluiten:
+Om weer af te sluiten, gebruik Ctrl+C in de command window om de angular te stoppen, en klik de swagger browser-window en de Backend.exe terminal weg.
