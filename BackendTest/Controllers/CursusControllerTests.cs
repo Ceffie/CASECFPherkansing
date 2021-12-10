@@ -7,6 +7,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Backend.Controllers.Tests
 {
@@ -47,6 +48,7 @@ namespace Backend.Controllers.Tests
             var result = cursusController.GetCursus();
 
             Assert.IsInstanceOfType(result.Result.Value, typeof(List<Cursus>));
+            Assert.AreEqual(result.Result.Value?.First().Titel, cursus.Titel);
             context.Dispose();
         }
 
