@@ -27,7 +27,7 @@ namespace Backend.Services
 
         private List<Cursus> GetCombinedCursussen(CursusContext _context, List<Cursus> cursussen)
         {
-            List<Cursus> cursussenWithInstanties = new List<Cursus>() { };
+            List<Cursus> cursussenWithInstanties = new ();
 
             foreach (Cursus cursus in cursussen)
             {
