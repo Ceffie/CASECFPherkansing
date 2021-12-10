@@ -1,7 +1,7 @@
-﻿using CASECFP_WebApi.Data;
-using CASECFP_WebApi.Models;
+﻿using Backend.Data;
+using Backend.Models;
 
-namespace CASECFP_WebApi.Services
+namespace Backend.Services
 {
     public interface ICursusHandler
     {

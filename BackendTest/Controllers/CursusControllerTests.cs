@@ -1,13 +1,13 @@
-﻿using CASECFP_WebApi.Data;
-using CASECFP_WebApi.Models;
-using CASECFP_WebApi.Services;
+﻿using Backend.Data;
+using Backend.Models;
+using Backend.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using System;
 using System.Collections.Generic;
 
-namespace CASECFP_WebApi.Controllers.Tests
+namespace Backend.Controllers.Tests
 {
     [TestClass()]
     public class CursusControllerTests

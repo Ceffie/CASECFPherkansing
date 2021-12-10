@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "CASECFP_WebApi": {
+    "Backend": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,

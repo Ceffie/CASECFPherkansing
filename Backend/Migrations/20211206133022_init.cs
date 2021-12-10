@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace CASECFP_WebApi.Migrations
+namespace Backend.Migrations
 {
     public partial class init : Migration
     {

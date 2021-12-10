@@ -1,11 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using CASECFP_WebApi.Data;
-using CASECFP_WebApi.Models;
-using CASECFP_WebApi.Services;
+using Backend.Data;
+using Backend.Models;
+using Backend.Services;
 using System.Text.Json;
 
-namespace CASECFP_WebApi.Controllers
+namespace Backend.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

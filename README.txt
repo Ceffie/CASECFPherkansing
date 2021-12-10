@@ -1,7 +1,9 @@
-Welkom bij de case herkansing van Cefas Pex. Dit project is gemaakt met behulp van de nieuwste Visual Studio, .NET etc. De geïnstalleerde workloads zijn te zien in bijlage1.jpg
+Welkom bij de case herkansing van Cefas Pex. Dit project is gemaakt met behulp van de nieuwste Visual Studio (2022), .NET (6.0) etc. (vanaf 10/12/2021) 
+De geïnstalleerde workloads op de gebruikte computer zijn te zien in bijlage1.jpg
+
 Hierbij de setup om de site op te starten:
 
-1. Open met behulp van Visual Studio de Backend.sln
+1. Open met behulp van Visual Studio (administrator) de Backend.sln
 
 2. Run in de Package Manager Console de volgende code om de database aan te maken:
 Update-Database
@@ -10,7 +12,8 @@ Update-Database
 
 4. Met een nieuw Command window, ga naar de folder AngularFrontend (die zit in Frontend).
 
-5. Run de volgende code:
+5. Run de volgende code in volgorde:
+npm install
 npm start
 
 6. In de command window zie je zodra het succesvol is gecompiled het volgende staan:

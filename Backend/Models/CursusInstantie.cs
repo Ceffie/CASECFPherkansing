@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace CASECFP_WebApi.Models
+namespace Backend.Models
 {
     public class CursusInstantie
     {

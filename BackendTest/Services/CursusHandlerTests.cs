@@ -1,12 +1,12 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
-using CASECFP_WebApi.Models;
-using CASECFP_WebApi.Data;
+using Backend.Models;
+using Backend.Data;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Threading.Tasks;
 
-namespace CASECFP_WebApi.Services.Tests
+namespace Backend.Services.Tests
 {
     [TestClass()]
     public class CursusHandlerTests
