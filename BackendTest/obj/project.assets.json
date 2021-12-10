@@ -11589,8 +11589,8 @@
     },
     "Backend/1.0.0": {
       "type": "project",
-      "path": "../CASECFP WebApi/Backend.csproj",
-      "msbuildProject": "../CASECFP WebApi/Backend.csproj"
+      "path": "../Backend/Backend.csproj",
+      "msbuildProject": "../Backend/Backend.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -11636,8 +11636,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\ceffa\\source\\repos\\Git\\CASECFP WebApi\\CASECFP WebApi\\Backend.csproj": {
-              "projectPath": "C:\\Users\\ceffa\\source\\repos\\Git\\CASECFP WebApi\\CASECFP WebApi\\Backend.csproj"
+            "C:\\Users\\ceffa\\source\\repos\\Git\\CASECFP WebApi\\Backend\\Backend.csproj": {
+              "projectPath": "C:\\Users\\ceffa\\source\\repos\\Git\\CASECFP WebApi\\Backend\\Backend.csproj"
             }
           }
         }

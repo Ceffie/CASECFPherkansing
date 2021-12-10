@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
-using CASECFP_WebApi.Data;
-using CASECFP_WebApi.Services;
+using Backend.Data;
+using Backend.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
