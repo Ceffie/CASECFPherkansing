@@ -1,0 +1,17 @@
+<h2>Weekoverzicht</h2>
+<table class="table">
+<thead>
+    <tr scope="col">
+        <th>Start</th>
+        <th>Duur</th>
+        <th>Titel</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let cursusInfo of cursusInstantiesData" scope='row'> 
+        <td class = "startDatum-row">{{ cursusInfo.startDatum | date: 'dd/MM/yyyy' }}</td>
+        <td class = "duur-row">{{ cursusInfo.duur }} dagen</td>
+        <td class = "titel-row">{{ cursusInfo.titel }}</td>
+    </tr>
+</tbody>
+</table>
