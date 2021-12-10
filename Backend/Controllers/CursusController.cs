@@ -12,7 +12,7 @@ namespace Backend.Controllers
     public class CursusController : ControllerBase
     {
         private readonly CursusContext _context;
-        private ICursusHandler cursusHandler;
+        private readonly ICursusHandler cursusHandler;
 
         public CursusController(CursusContext context, ICursusHandler cursusHandler)
         {

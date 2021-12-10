@@ -14,14 +14,14 @@ namespace Backend.Services.Tests
         [TestMethod()]
         public async Task AddSingleCursusWithSingleInstantie()
         {
-            List<CursusInstantie> cursusInstantie1 = new List<CursusInstantie>() {
+            List<CursusInstantie> cursusInstantie1 = new () {
                 new()
                 {
                     StartDatum = DateTime.Now
                 }
             };
 
-            List<Cursus> cursussen = new List<Cursus>() {
+            List<Cursus> cursussen = new () {
                 new()
                 {
                     Titel = "Titel1",
@@ -45,21 +45,21 @@ namespace Backend.Services.Tests
         [TestMethod()]
         public async Task AddSingleCursusWithMultipleInstanties()
         {
-            List<CursusInstantie> cursusInstantie1 = new List<CursusInstantie>() {
+            List<CursusInstantie> cursusInstantie1 = new () {
                 new()
                 {
                     StartDatum = DateTime.Now
                 }
             };
 
-            List<CursusInstantie> cursusInstantie2 = new List<CursusInstantie>() {
+            List<CursusInstantie> cursusInstantie2 = new () {
                 new()
                 {
                     StartDatum = DateTime.Now.AddDays(1)
                 }
             };
 
-            List<Cursus> cursussen = new List<Cursus>() {
+            List<Cursus> cursussen = new () {
                 new()
                 {
                     Titel = "Titel1",
@@ -90,21 +90,21 @@ namespace Backend.Services.Tests
         [TestMethod()]
         public async Task AddMultipleCursussenWithMultipleInstanties()
         {
-            List<CursusInstantie> cursusInstantie1 = new List<CursusInstantie>() {
+            List<CursusInstantie> cursusInstantie1 = new () {
                 new()
                 {
                     StartDatum = DateTime.Now
                 }
             };
 
-            List<CursusInstantie> cursusInstantie2 = new List<CursusInstantie>() {
+            List<CursusInstantie> cursusInstantie2 = new () {
                 new()
                 {
                     StartDatum = DateTime.Now.AddDays(1)
                 }
             };
 
-            List<Cursus> cursussen = new List<Cursus>() {
+            List<Cursus> cursussen = new () {
                 new()
                 {
                     Titel = "Titel1",
@@ -135,21 +135,21 @@ namespace Backend.Services.Tests
         [TestMethod()]
         public async Task AddSingleCursusWithMultipleInstantiesWithSingleDuplicate()
         {
-            List<CursusInstantie> cursusInstantie1 = new List<CursusInstantie>() {
+            List<CursusInstantie> cursusInstantie1 = new () {
                 new()
                 {
                     StartDatum = DateTime.Now
                 }
             };
 
-            List<CursusInstantie> cursusInstantie2 = new List<CursusInstantie>() {
+            List<CursusInstantie> cursusInstantie2 = new () {
                 new()
                 {
                     StartDatum = DateTime.Now.AddDays(1)
                 }
             };
 
-            List<Cursus> cursussen = new List<Cursus>() {
+            List<Cursus> cursussen = new () {
                 new()
                 {
                     Titel = "Titel1",

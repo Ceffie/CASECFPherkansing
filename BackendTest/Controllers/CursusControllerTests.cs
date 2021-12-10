@@ -28,13 +28,13 @@ namespace Backend.Controllers.Tests
             optionsBuilder.UseInMemoryDatabase("InMemoryCursussenDB");
             var context = new CursusContext(optionsBuilder.Options);
 
-            List<CursusInstantie> cursusInstantie1 = new List<CursusInstantie>() {
+            List<CursusInstantie> cursusInstantie1 = new () {
                 new()
                 {
                     StartDatum = DateTime.Now
                 }
             };
-            Cursus cursus = new Cursus()
+            Cursus cursus = new ()
             {
                 Titel = "Titel1",
                 Duur = 1,
@@ -44,7 +44,7 @@ namespace Backend.Controllers.Tests
             context.Cursus.Add(cursus);
             context.SaveChanges();
 
-            CursusController cursusController = new CursusController(context, handler);
+            CursusController cursusController = new (context, handler);
             var result = cursusController.GetCursus();
 
             Assert.IsInstanceOfType(result.Result.Value, typeof(List<Cursus>));
@@ -60,24 +60,25 @@ namespace Backend.Controllers.Tests
             var context = new CursusContext(optionsBuilder.Options);
 
 
-            List<CursusInstantie> cursusInstantie1 = new List<CursusInstantie>() {
+            List<CursusInstantie> cursusInstantie1 = new () {
                 new()
                 {
                     StartDatum = DateTime.Now
                 }
             };
 
-            List<Cursus> cursusList = new List<Cursus>()
+            List<Cursus> cursusList = new ()
             {
-                new(){
-                Titel = "Titel1",
-                Duur = 1,
-                Code = "Code1",
-                CursusInstanties = cursusInstantie1
+                new ()
+                {
+                    Titel = "Titel1",
+                    Duur = 1,
+                    Code = "Code1",
+                    CursusInstanties = cursusInstantie1
                 }
             };
 
-            CursusController cursusController = new CursusController(context, handler);
+            CursusController cursusController = new (context, handler);
             var result = cursusController.PostCursus(cursusList);
 
             Assert.IsInstanceOfType(result.Result.Result, typeof(OkObjectResult));
